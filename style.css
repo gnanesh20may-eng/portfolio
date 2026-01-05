@@ -1,0 +1,135 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #0f172a; /* Dark blue-black */
+  color: #e5e7eb; /* Light text */
+  min-height: 100vh;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+  color: #38bdf8;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #38bdf8;
+}
+
+/* ===== Home Page ===== */
+.home {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.home h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.home h1 span {
+  color: #38bdf8;
+}
+
+.home h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #cbd5f5;
+}
+
+.home p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* ===== Common Content Section ===== */
+.content {
+  padding: 80px 100px;
+}
+
+.content h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #38bdf8;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.content ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.content ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== Projects ===== */
+.content h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #f8fafc;
+}
+
+/* ===== Contact ===== */
+.content p strong {
+  color: #38bdf8;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+
+  .content {
+    padding: 40px 25px;
+  }
+
+  .home h1 {
+    font-size: 36px;
+  }
+}
