@@ -1,264 +1,140 @@
-/* =========================
-   GLOBAL STYLES
-========================= */
+:root {
+  --bg: #020617;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
-  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-/* =========================
-   NAVIGATION BAR
-========================= */
+/* NAVBAR */
 nav {
-  background-color: #020617;
-  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #1e293b;
+  padding: 20px 40px;
 }
 
-/* LOGO */
 .logo {
-  color: #38bdf8;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--primary);
 }
 
-.logo:hover {
-  transform: scale(1.08);
-  color: #7dd3fc;
-}
-
-/* NAV LINKS */
 nav ul {
   list-style: none;
   display: flex;
+  gap: 20px;
+  padding: 0;
 }
 
-nav ul li {
-  margin-left: 30px;
-}
-
-nav ul li a {
-  color: #e5e7eb;
+nav a {
   text-decoration: none;
-  font-size: 16px;
-  position: relative;
-  transition: color 0.3s ease;
+  color: var(--text);
+  font-weight: 500;
 }
 
-/* Underline animation */
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -5px;
-  background-color: #38bdf8;
-  transition: width 0.3s ease;
+nav a:hover,
+nav a.active {
+  color: var(--primary);
 }
 
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-nav ul li a:hover {
-  color: #38bdf8;
-}
-
-/* =========================
-   HOME PAGE
-========================= */
-.home {
-  padding: 120px 20px;
+/* HERO */
+.hero {
   text-align: center;
+  padding: 70px 20px;
 }
 
-.home h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+.profile-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 30px rgba(56,189,248,0.6);
+  margin-bottom: 20px;
 }
 
-.home h1 span {
-  color: #38bdf8;
+.highlight {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.home h3 {
-  font-size: 22px;
-  color: #cbd5f5;
-  margin-bottom: 15px;
+.typing {
+  color: var(--primary);
 }
 
-.home p {
-  font-size: 18px;
-  max-width: 650px;
-  margin: auto;
-}
-
-/* =========================
-   COMMON CONTENT SECTION
-========================= */
-.content {
-  padding: 80px 100px;
-}
-
-.content h1 {
-  font-size: 36px;
-  margin-bottom: 25px;
-  color: #38bdf8;
-}
-
-.content p {
-  font-size: 18px;
-  margin-bottom: 18px;
-}
-
-.content ul {
-  padding-left: 20px;
-}
-
-.content ul li {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-/* =========================
-   PROJECT TITLES
-========================= */
-.content h3 {
-  font-size: 22px;
-  margin-top: 25px;
-  color: #f8fafc;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.content h3:hover {
-  transform: translateX(6px);
-  color: #38bdf8;
-}
-
-/* =========================
-   BUTTON STYLES (CLICK EFFECTS)
-========================= */
+/* BUTTON */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: inline-block;
   margin-top: 20px;
-  padding: 12px 28px;
-  background-color: #38bdf8;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #020617;
-  font-weight: 600;
   border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover */
 .btn:hover {
-  background-color: #0ea5e9;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(56,189,248,0.4);
 }
 
-/* Click (Active) */
-.btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.25);
+/* ABOUT */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   LINKS
-========================= */
-a {
-  color: #e5e7eb;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.about-img img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--secondary);
+  box-shadow: 0 10px 30px rgba(34,197,94,0.4);
 }
 
-a:hover {
-  color: #38bdf8;
+.about-text {
+  max-width: 600px;
 }
 
-/* =========================
-   CONTACT ICONS (MAIL / LINKEDIN / GITHUB)
-========================= */
-.contact-icon {
-  font-size: 22px;
-  color: #38bdf8;
-  margin-right: 8px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Icon hover */
-.content p:hover .contact-icon {
-  transform: scale(1.2) rotate(5deg);
-  color: #7dd3fc;
-}
-
-/* =========================
-   SECTION ANIMATION
-========================= */
-section {
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   FOOTER (OPTIONAL)
-========================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  color: #94a3b8;
-  border-top: 1px solid #1e293b;
+  color: var(--muted);
+  font-size: 14px;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* MOBILE */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
+    gap: 15px;
   }
 
-  nav ul {
-    margin-top: 10px;
+  .about-section {
+    flex-direction: column;
+    text-align: center;
   }
 
-  nav ul li {
-    margin-left: 15px;
-  }
-
-  .content {
-    padding: 40px 25px;
-  }
-
-  .home h1 {
-    font-size: 36px;
+  .about-img img {
+    width: 200px;
+    height: 200px;
   }
 }

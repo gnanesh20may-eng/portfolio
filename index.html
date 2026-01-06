@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Gnaneshwer R | Portfolio</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gnaneshwer R | Engineering Student & Python Developer Portfolio">
+  <meta name="author" content="Gnaneshwer R">
+
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-<nav>
-  <h2 class="logo">Gnaneshwer</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <nav>
+    <h2 class="logo">GR</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="home">
-  <h1>Hi, I'm <span>Gnaneshwer R</span></h1>
-  <h3>Engineering Student | Python Developer</h3>
-  <p>Passionate about coding, problem-solving, and building practical software solutions.</p>
-</section>
+  <section class="hero">
+    <img src="profile.jpg" alt="Gnaneshwer R" class="profile-img">
+
+    <h1>Hi, I'm <span class="highlight">Gnaneshwer R</span></h1>
+    <h3><span class="typing"></span></h3>
+
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <footer>
+    © 2026 Gnaneshwer R · Built with HTML, CSS & GitHub Pages
+  </footer>
+
+  <script>
+    const text = "Engineering Student | Python Developer";
+    let i = 0;
+
+    function typingEffect() {
+      if (i < text.length) {
+        document.querySelector(".typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 100);
+      }
+    }
+    typingEffect();
+  </script>
 
 </body>
 </html>
